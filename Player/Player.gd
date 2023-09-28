@@ -35,16 +35,16 @@ func move_state(input, delta):
 	
 	if not horizontal_move(input):
 		apply_friction(delta)
-		animatedSprite.animation = "Idle"
+		animatedSprite.animation = "Wizard Idle"
 	else:
 		apply_acceleration(input.x, delta)
-		animatedSprite.animation = "Run"
+		animatedSprite.animation = "Wizard Run"
 		animatedSprite.flip_h = input.x > 0
 	
 	if is_on_floor():
 		reset_double_jump()
 	else:
-		animatedSprite.animation = "Jump"
+		animatedSprite.animation = "Wizard Jump"
 	
 	if can_jump():
 		input_jump()
@@ -61,7 +61,7 @@ func move_state(input, delta):
 	
 	var just_landed = is_on_floor() and was_in_air
 	if just_landed:
-		animatedSprite.animation = "Run"
+		animatedSprite.animation = "Wizard Run"
 		animatedSprite.frame = 1
 	
 	var just_left_ground = not is_on_floor() and was_on_floor
@@ -72,9 +72,9 @@ func move_state(input, delta):
 func climb_state(input):
 	if not is_on_ladder(): state = MOVE
 	if input.length() != 0:
-		animatedSprite.animation = "Run"
+		animatedSprite.animation = "Wizard Run"
 	else:
-		animatedSprite.animation = "Idle"
+		animatedSprite.animation = "Wizard Idle"
 	velocity = input * moveData.CLIMB_SPEED
 	velocity = move_and_slide(velocity, Vector2.UP)
 

@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player/FastPlayerMovementData.tres" type="Resource" id=1]
-[ext_resource path="res://Player/PlayerBlueSkin.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://Player/PlayerGreenSkin.tres" type="SpriteFrames" id=2]
 [ext_resource path="res://Player/Player.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 6, 8.5 )
+extents = Vector2( 6.5, 8 )
 
 [node name="Player" type="KinematicBody2D"]
 z_index = 10
@@ -15,13 +15,13 @@ moveData = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -12 )
+scale = Vector2( -1, 1 )
 frames = ExtResource( 2 )
-animation = "Jump"
+animation = "Wizard Jump"
 playing = true
-flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -8.5 )
+position = Vector2( -0.5, -9 )
 shape = SubResource( 3 )
 
 [node name="LadderCheck" type="RayCast2D" parent="."]

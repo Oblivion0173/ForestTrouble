@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/characters_packed.png-890290c811414ed077a6b10fd28e12f1.stex"
+path="res://.import/Owlet_Monster_Walk+Attack_6.png-fcd47f652eb7a840ad009ad11b6d5be7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters_packed.png"
-dest_files=[ "res://.import/characters_packed.png-890290c811414ed077a6b10fd28e12f1.stex" ]
+source_file="res://Player/free-pixel-art-tiny-hero-sprites/2 Owlet_Monster/Owlet_Monster_Walk+Attack_6.png"
+dest_files=[ "res://.import/Owlet_Monster_Walk+Attack_6.png-fcd47f652eb7a840ad009ad11b6d5be7.stex" ]
 
 [params]
 
