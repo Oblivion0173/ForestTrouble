@@ -11,14 +11,21 @@ var double_jump = 1
 var buffered_jump = false
 var coyote_jump = false
 var on_door = false
+var player_can_die = false
 
 onready var animatedSprite: = $AnimatedSprite
 onready var ladderCheck: = $LadderCheck
 onready var jumpBufferTimer: = $JumpBufferTimer
 onready var coyoteJumpTimer: = $CoyoteJumpTimer
 onready var remoteTransform2D: = $RemoteTransform2D
+onready var invulnerability = $Invulnerability
+
+func _ready():
+	invulnerability.start()
 
 func _physics_process(delta):
+	print(invulnerability.time_left)
+	print(player_can_die)
 	var input = Vector2.ZERO
 	input.x = Input.get_axis("ui_left", "ui_right")
 	input.y = Input.get_axis("ui_up", "ui_down")
@@ -79,9 +86,10 @@ func climb_state(input):
 	velocity = move_and_slide(velocity, Vector2.UP)
 
 func player_die():
-	SoundPlayer.play_sound(SoundPlayer.HURT)
-	queue_free()
-	Events.emit_signal("player_died")
+	if player_can_die:
+		SoundPlayer.play_sound(SoundPlayer.HURT)
+		queue_free()
+		Events.emit_signal("player_died")
 
 func connect_camera(camera):
 	var camera_path = camera.get_path()
@@ -143,3 +151,6 @@ func _on_JumpBufferTimer_timeout():
 
 func _on_CoyoteJumpTimer_timeout():
 	coyote_jump = false
+
+func _on_Invulnerability_timeout():
+	player_can_die = true

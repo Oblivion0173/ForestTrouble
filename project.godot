@@ -39,7 +39,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Pixel Platformer"
-run/main_scene="res://Levels/Level1.tscn"
+run/main_scene="res://MainMenu.tscn"
 run/delta_sync_after_draw=true
 config/icon="res://Assets/Extras/icon.png"
 

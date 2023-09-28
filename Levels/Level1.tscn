@@ -89,8 +89,8 @@ scale = Vector2( 0.9, 0.857143 )
 curve = SubResource( 1 )
 
 [node name="PathFollow2D" parent="MovingSpikeEnemy" index="0"]
-position = Vector2( -5, -9 )
-offset = 281.054
+position = Vector2( -27.9379, -9 )
+offset = 258.114
 
 [node name="MovingSpikeEnemy2" parent="." index="21" instance=ExtResource( 8 )]
 position = Vector2( 189, 63 )
@@ -99,8 +99,8 @@ animation_type = 1
 speed = 2
 
 [node name="PathFollow2D" parent="MovingSpikeEnemy2" index="0"]
-position = Vector2( 0, 45 )
-offset = 62.9815
+position = Vector2( 0, 2.57171 )
+offset = 20.5646
 
 [node name="AnimationPlayer" parent="MovingSpikeEnemy2" index="1"]
 playback_speed = 2.0
