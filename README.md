@@ -1,2 +1,3 @@
 # ForestTrouble
-This is a 2D sidescrolling combat platformer created using Godot 4. It features a fully controllable main character, 2 basic enemies, a boss room, and original sprites and animations for all of them. A few complex mechanisms are implemented, such as a parry system for the bosses, and enemy specific attacks.
+
+My first 2D forest platformer focused on clean movement and enemy code. Features an interesting Thwomp-Like enemy along with a checkpoint system. The sprites have been created in Aseprite with some inspiration from Google.
