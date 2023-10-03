@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Enemies/Snail_Enemy.gd" type="Script" id=2]
+[ext_resource path="res://Hitboxes/Hitbox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Snail/Snail Walk3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Snail/Snail Walk2.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Snail/Snail Walk1.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Snail/Snail Walk4.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Snail Walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 5.5, 5 )
+
+[node name="WalkingEnemy" type="KinematicBody2D"]
+collision_layer = 2
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -1, -14 )
+scale = Vector2( -1, 1 )
+frames = SubResource( 3 )
+animation = "Snail Walk"
+frame = 3
+playing = true
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.5, -5 )
+shape = SubResource( 4 )
+
+[node name="LedgeCheckRight" type="RayCast2D" parent="."]
+position = Vector2( 5, -1 )
+enabled = true
+cast_to = Vector2( 0, 2 )
+
+[node name="LedgeCheckLeft" type="RayCast2D" parent="."]
+position = Vector2( -6, -1 )
+enabled = true
+cast_to = Vector2( 0, 2 )
+
+[node name="Hitbox" parent="." instance=ExtResource( 3 )]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+polygon = PoolVector2Array( -8, -1, -8, -9, -2, -12, -2, -14, -1, -16, 0, -16, 1, -14, 1, -12, 7, -9, 7, -1 )

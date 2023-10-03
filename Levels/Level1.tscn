@@ -2,12 +2,12 @@
 
 [ext_resource path="res://Levels/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Checkpoint.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Enemies/WalkingEnemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Enemies/Snail_Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/Ladder.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Enemies/StompEnemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Enemies/Rock_Stomp.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World/TileMap.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemies/Spikes.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Enemies/MovingSpikeEnemy.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Enemies/Bat_Enemy.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World/Door.tscn" type="PackedScene" id=9]
 
 [sub_resource type="Curve2D" id=1]
@@ -53,10 +53,10 @@ position = Vector2( 202, 131 )
 [node name="Spikes4" parent="." index="9" instance=ExtResource( 7 )]
 position = Vector2( 219, 131 )
 
-[node name="WalkingEnemy" parent="." index="10" instance=ExtResource( 3 )]
+[node name="Snail_Enemy_1" parent="." index="10" instance=ExtResource( 3 )]
 position = Vector2( -88, 112 )
 
-[node name="WalkingEnemy2" parent="." index="11" instance=ExtResource( 3 )]
+[node name="Snail_Enemy_2" parent="." index="11" instance=ExtResource( 3 )]
 position = Vector2( 426, 0 )
 
 [node name="Ladder" parent="." index="12" instance=ExtResource( 4 )]
@@ -83,37 +83,37 @@ position = Vector2( 369, 5 )
 [node name="Ladder8" parent="." index="19" instance=ExtResource( 4 )]
 position = Vector2( 369, -11 )
 
-[node name="MovingSpikeEnemy" parent="." index="20" instance=ExtResource( 8 )]
+[node name="Bat" parent="." index="20" instance=ExtResource( 8 )]
 position = Vector2( 31.5, 52.7143 )
 scale = Vector2( 0.9, 0.857143 )
 curve = SubResource( 1 )
 
-[node name="PathFollow2D" parent="MovingSpikeEnemy" index="0"]
-position = Vector2( -5, -9 )
-offset = 281.054
+[node name="PathFollow2D" parent="Bat" index="0"]
+position = Vector2( 35, -23.0389 )
+offset = 54.0291
 
-[node name="MovingSpikeEnemy2" parent="." index="21" instance=ExtResource( 8 )]
+[node name="Bat_2" parent="." index="21" instance=ExtResource( 8 )]
 position = Vector2( 189, 63 )
 curve = SubResource( 2 )
 animation_type = 1
 speed = 2
 
-[node name="PathFollow2D" parent="MovingSpikeEnemy2" index="0"]
-position = Vector2( 0, 45 )
-offset = 62.9815
+[node name="PathFollow2D" parent="Bat_2" index="0"]
+position = Vector2( 0, 30.4296 )
+offset = 48.4202
 
-[node name="AnimationPlayer" parent="MovingSpikeEnemy2" index="1"]
+[node name="AnimationPlayer" parent="Bat_2" index="1"]
 playback_speed = 2.0
 
 [node name="Checkpoint" parent="." index="22" instance=ExtResource( 2 )]
 position = Vector2( 317, -17 )
 
-[node name="StompEnemy" parent="." index="23" instance=ExtResource( 5 )]
+[node name="Rock_Stomp" parent="." index="23" instance=ExtResource( 5 )]
 position = Vector2( 190, -67 )
 
 [node name="Door" parent="." index="24" instance=ExtResource( 9 )]
 position = Vector2( -289, -64 )
 target_level_path = "res://Levels/Level2.tscn"
 
-[editable path="MovingSpikeEnemy"]
-[editable path="MovingSpikeEnemy2"]
+[editable path="Bat"]
+[editable path="Bat_2"]

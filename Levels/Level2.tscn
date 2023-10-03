@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Levels/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/TileMap.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Enemies/StompEnemy.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Enemies/WalkingEnemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enemies/Rock_Stomp.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Enemies/Snail_Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://World/Door.tscn" type="PackedScene" id=5]
 
 [node name="Level2" instance=ExtResource( 1 )]
@@ -24,29 +24,29 @@ tile_data = PoolIntArray( -1310690, 0, 131073, -1310689, 0, 65539, -1310688, 0, 
 position = Vector2( 325, -65 )
 target_level_path = "res://EndScene.tscn"
 
-[node name="StompEnemy" parent="." index="7" instance=ExtResource( 3 )]
+[node name="Rock_1" parent="." index="7" instance=ExtResource( 3 )]
 position = Vector2( 117, 109 )
 
-[node name="StompEnemy2" parent="." index="8" instance=ExtResource( 3 )]
+[node name="Rock_2" parent="." index="8" instance=ExtResource( 3 )]
 position = Vector2( 156, 77 )
 
-[node name="StompEnemy3" parent="." index="9" instance=ExtResource( 3 )]
+[node name="Rock_3" parent="." index="9" instance=ExtResource( 3 )]
 position = Vector2( 194, 46 )
 
-[node name="StompEnemy4" parent="." index="10" instance=ExtResource( 3 )]
+[node name="Rock_4" parent="." index="10" instance=ExtResource( 3 )]
 position = Vector2( 264, -19 )
 
-[node name="StompEnemy5" parent="." index="11" instance=ExtResource( 3 )]
+[node name="Rock_5" parent="." index="11" instance=ExtResource( 3 )]
 position = Vector2( 229, 13 )
 
-[node name="WalkingEnemy" parent="." index="12" instance=ExtResource( 4 )]
+[node name="Snail_1" parent="." index="12" instance=ExtResource( 4 )]
 position = Vector2( 245, 176 )
 
-[node name="WalkingEnemy3" parent="." index="13" instance=ExtResource( 4 )]
+[node name="Snail_2" parent="." index="13" instance=ExtResource( 4 )]
 position = Vector2( 175, 176 )
 
-[node name="WalkingEnemy4" parent="." index="14" instance=ExtResource( 4 )]
+[node name="Snail_3" parent="." index="14" instance=ExtResource( 4 )]
 position = Vector2( -4, 176 )
 
-[node name="WalkingEnemy2" parent="." index="15" instance=ExtResource( 4 )]
+[node name="Snail_4" parent="." index="15" instance=ExtResource( 4 )]
 position = Vector2( -124, 176 )

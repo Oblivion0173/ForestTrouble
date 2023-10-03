@@ -19,27 +19,27 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://World/Ladder.gd"
 }, {
+"base": "Resource",
+"class": "MovementData",
+"language": "GDScript",
+"path": "res://Player/MovementDataScript.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
 "path": "res://Player/Player.gd"
-}, {
-"base": "Resource",
-"class": "PlayerMovementData",
-"language": "GDScript",
-"path": "res://Player/PlayerMovementData.gd"
 } ]
 _global_script_class_icons={
 "GitAPI": "",
 "Ladder": "",
-"Player": "",
-"PlayerMovementData": ""
+"MovementData": "",
+"Player": ""
 }
 
 [application]
 
 config/name="Pixel Platformer"
-run/main_scene="res://MainMenu.tscn"
+run/main_scene="res://Menus/MainMenu.tscn"
 run/delta_sync_after_draw=true
 config/icon="res://Assets/Extras/icon.png"
 
